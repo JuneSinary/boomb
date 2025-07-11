@@ -1,0 +1,39 @@
+spring:
+  mvc:
+    static-path-pattern: /static/**
+  web:
+    resources:
+      static-locations:
+        - classpath:/static/
+        - classpath:/public/
+  application:
+    name: duang
+  freemarker:
+    template-loader-path: classpath:/templates/
+    suffix: .ftl
+    content-type: text/html
+    charset: UTF-8
+    cache: false
+    settings:
+      number_format: '#'
+      template_exception_handler: rethrow
+      default_encoding: UTF-8
+      classic_compatible: true
+    expose-request-attributes: true
+    expose-spring-macro-helpers: true
+    request-context-attribute: request
+server:
+  error:
+    whitelabel:
+      enabled: false
+    path: /error
+    include-message: always
+    include-binding-errors: always
+sa-token:
+  token-name: bomber
+  timeout: -1
+  active-timeout: -1
+  is-concurrent: true
+  is-share: false
+  token-style: random-128
+  is-log: true

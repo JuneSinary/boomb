@@ -1,0 +1,29 @@
+spring:
+  datasource:
+    type: com.mysql.cj.jdbc.MysqlDataSource
+    dynamic:
+      datasource:
+        index_A:
+          lazy: true
+          type: ${spring.datasource.type}
+          driverClassName: com.mysql.cj.jdbc.Driver
+          url: jdbc:mysql://192.168.1.111:3306/index_A?useSSL=false&serverTimezone=UTC
+          username: root
+          password: Zt@M_677^:4eG~
+        index_B:
+          lazy: true
+          type: ${spring.datasource.type}
+          driverClassName: com.mysql.cj.jdbc.Driver
+          url: jdbc:mysql://192.168.1.111:3306/index_B?useSSL=false&serverTimezone=UTC
+          username: root
+          password: Zt@M_677^:4eG~
+      primary: index_A
+mybatis-plus:
+  configuration:
+    logImpl: org.apache.ibatis.logging.nologging.NoLoggingImpl
+    aggressive-lazy-loading: true
+    map-underscore-to-camel-case: true
+    auto-mapping-unknown-column-behavior: none
+    auto-mapping-behavior: partial
+  mapper-locations: classpath:mapper/**/*.xml
+  type-aliases-package: bilibili.balabala.**.model
