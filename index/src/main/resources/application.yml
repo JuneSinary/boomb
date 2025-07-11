@@ -29,16 +29,16 @@ spring:
           lazy: true
           type: ${spring.datasource.type}
           driverClassName: com.mysql.cj.jdbc.Driver
-          url: jdbc:mysql://192.168.1.111:3306/index_A?useSSL=false&serverTimezone=UTC
-          username: root
-          password: Zt@M_677^:4eG~
+          url: jdbc:mysql://6.6.6.6:6666/index_A?useSSL=false&serverTimezone=UTC
+          username: 666
+          password: 666
         index_B:
           lazy: true
           type: ${spring.datasource.type}
           driverClassName: com.mysql.cj.jdbc.Driver
-          url: jdbc:mysql://192.168.1.111:3306/index_B?useSSL=false&serverTimezone=UTC
-          username: root
-          password: Zt@M_677^:4eG~
+          url: jdbc:mysql://6.6.6.6:6666/index_B?useSSL=false&serverTimezone=UTC
+          username: 666
+          password: 666
       primary: index_A
   session:
     redis:
@@ -49,7 +49,7 @@ spring:
     timeout: 30m
   data:
     redis:
-      host: 192.168.1.111
+      host: 6.6.6.6
       port: 6379
       database: 0
       jedis:
