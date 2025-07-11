@@ -8,8 +8,8 @@ spring:
           type: ${spring.datasource.type}
           driverClassName: com.mysql.cj.jdbc.Driver
           url: jdbc:mysql://6.6.6.6:6666/index_A?useSSL=false&serverTimezone=UTC
-          username: root
-          password: Zt@M_677^:4eG~
+          username: 666
+          password: 666
         index_B:
           lazy: true
           type: ${spring.datasource.type}
